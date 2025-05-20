@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: ri25gxnxb-java-springboot
+  janus-idp.io/tekton: ri25gxnxb-java-springboot
+  backstage.io/kubernetes-id: ri25gxnxb-java-springboot
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: ri25gxnxb-java-springboot
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
